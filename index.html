@@ -138,32 +138,76 @@
           </div>
           <div class="members">
             <h2>New Members</h2>
-            <!-- image of member -->
-            <!-- Name of member -->
-            <!-- email address -->
-            <!-- Date joined -->
-            <!-- separated by <hr/> -->
-            <!-- repeat 4 times total -->
+            <div class="listing">
+                <img src="images/member-1.jpg" alt="" />
+              <div class="memberName">Victoria Chambers</div>
+              <div class="emailAdress">victoria.chambers80@example.com</div>
+              <div class="dateJoined">10/15/15</div>
+            </div>
+            <div class="newMemberListing">
+                <img src="images/member-2.jpg" alt="" />
+              <div class="memberName">Dale Byrd</div>
+              <div class="emailAdress">dale.byrd52@example.com</div>
+              <div class="dateJoined">09/17/15</div>
+            </div>
+            <div class="newMemberListing">
+                <img src="images/member-3.jpg" alt="" />
+              <div class="memberName">Dawn Wood</div>
+              <div class="emailAdress">dawn.wood@example.com</div>
+              <div class="dateJoined">08/10/15</div>
+            </div>
+            <div class="newMemberListing">
+                <img src="images/member-4.jpg" alt="" />
+              <div class="memberName">Dan Oliver</div>
+              <div class="emailAdress">dan.oliver@example.com</div>
+              <div class="dateJoined">05/22/15</div>
+            </div>
           </div>
           <div class="recent-activity">
             <h2>Recent Activity</h2> 
-            <!-- image of member -->
-            <!-- member activity -->
-            <!-- how long ago active -->
-            <!-- arrow -->
-            <!-- repeat 4 times total -->
+            <div class="listing">
+              <img src="images/member-1.jpg" alt="" />
+              <div class="memberActivity">Victoria Chambers commented on YourApp's SEO Tips</div>
+              <div class="timeSinceActivity">4 hours ago</div>
+            </div>
+            <div class="listing">
+              <img src="images/member-2.jpg" alt="" />
+              <div class="memberActivity">Victoria Chambers commented on YourApp's SEO Tips</div>
+              <div class="timeSinceActivity">4 hours ago</div>
+            </div>
+            <div class="listing">
+              <img src="images/member-3.jpg" alt="" />
+              <div class="memberActivity">Victoria Chambers commented on YourApp's SEO Tips</div>
+              <div class="timeSinceActivity">4 hours ago</div>
+            </div>
+            <div class="listing">
+              <img src="images/member-4.jpg" alt="" />
+              <div class="memberActivity">Victoria Chambers commented on YourApp's SEO Tips</div>
+              <div class="timeSinceActivity">4 hours ago</div>
+            </div>
           </div>
           <div class="message">
-            <h2>Message Users</h2> 
-            <!-- search box for user -->
-            <!-- text box to send message to user -->
+            <form>
+              <legend>Message User</legend> 
+              <input type="text">
+              <textarea rows="5"></textarea>
+              <input type="submit" value="Send">
+            </form>
           </div>
           <div class="settings">
-            <h2>Settings</h2> 
-            <!-- send email notifications toggle -->
-            <!-- set profile to public toggle -->
-            <!-- timezone dropdown -->
-            <!-- save button and cancel button -->
+            <form>
+              <legend>Settings</legend> 
+              <label for="emailNotifications">Send Email Notifications</label>
+              <input type="checkbox" id="emailNotifications">
+              <label for="publicProfile">Set Profile to Public</label>
+              <input type="checkbox" id="publicProfile">
+              <select id="time-zone">
+                <option value="" disabled selected>Select Timezone</option>
+                <option value="adelaide">Adelaide GMT+10:30</option>
+              </select>
+              <input type="submit" value="Save">
+              <input type="reset" value="Cancel">
+            </form>
           </div>
         </main>
     </div>
