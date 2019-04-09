@@ -6,11 +6,7 @@
   --main-purple: #7476bf;
   --purple-transparent: #7476bfab;
   --dark-purple: #4d4c72;
-  --not-selected: rgba(255, 255, 255, 0.6);
-}
-
-* {
-  box-sizing: border-box;
+  --unselected: rgba(255, 255, 255, 0.6);
 }
 
 body {
@@ -18,25 +14,82 @@ body {
   color: #777777;
 }
 
+img {
+  border-radius: 50%;
+  display: block;
+}
+
+svg {
+  max-width: 100%;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+header {
+  background-color: var(--main-purple);
+  color: white;
+}
+
+.title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
 h1 {
-  font-size: 1.4em;
-  padding: 6px 20px;
+  padding: 1em 0;
   color: white;
   user-select: none;
+  margin: 0;
 }
 
 h1 span {
   font-weight: 300;
 }
 
-h2 {
+header svg {
+  width: 25px;  
+  fill: var(--unselected);
+  padding: 10px;
+}
+
+.user-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+  padding: 0 1em;
+}
+
+#avatarMain {
+  width: 30%;
+  height: auto;
+  margin: 1em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+  background-color: var(--dark-purple);
+}
+
+nav svg {
+  flex-basis: 40px;
+  fill: var(--unselected);
+}
+
+h3 {
   font-size: 0.8em;
   font-weight: 400;
   text-transform: uppercase;
   padding: 1em;
 }
 
-h3 {
+h2 {
   font-size: 1em;
   font-weight: 400; 
   padding: 1em;
@@ -44,52 +97,6 @@ h3 {
 
 svg:hover {
   fill: white;
-}
-
-/* -------------------- */
-/* Grid Styles -------- */
-/* -------------------- */
-
-.container {
-  margin: auto;
-  min-height: 100vh;
-  width: 100%;
-  display: grid;
-  grid-template-rows: 70px 1fr;
-  grid-template-columns: 90px 1fr;
-  grid-template-areas:
-    "header header"
-    "nav main"
-}
-
-header {
-  grid-area: header;
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--main-purple);
-}
-
-header svg {
-  padding: 23px;
-  fill: var(--not-selected);
-}
-
-nav {
-  grid-area: nav;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background-color: var(--dark-purple);
-}
-
-nav svg {
-  flex-basis: 80px;
-  padding: 20px 10px;
-  fill: var(--not-selected);
-}
-
-nav svg:hover {
-  border-left: 5px solid #85db80;
 }
 
 main {
@@ -101,7 +108,7 @@ main {
 
 main div {
   background-color: white;
-  padding: 30px;
+  padding: .4em;
 }
 
 .dashboard-nav {
@@ -112,8 +119,13 @@ main div {
 }
 
 #search {
-  background: url(icons/search.png) no-repeat;
-  background-size: 20px;
+  background: url(../icons/iconmonstr-search-thin.svg) no-repeat right;
+  background-size: 1em;
+  padding: .4em;
+}
+
+.search-icon {
+  fill: var(--dark-purple);
 }
 
 @media (min-width: 768px) {
@@ -126,6 +138,9 @@ main div {
       "social social"
       "members activity"
       "message settings"
+  }
+  nav svg:hover {
+    border-left: 5px solid #85db80;
   }
   .dashboard-nav {
     grid-area: dashboard;
