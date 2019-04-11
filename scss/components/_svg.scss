@@ -1,0 +1,11 @@
+//=======================
+// SVG Styles
+//=======================
+
+svg {
+  max-width: 100%;
+}
+
+svg:hover {
+  fill: $svg-selected;
+}

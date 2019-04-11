@@ -11,7 +11,7 @@ var ctx = document.getElementById('mainTraffic').getContext('2d');
       data: {
           labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
           datasets: [{
-              label: 'Traffic',
+              label: 'Hourly',
               backgroundColor: '#7476bf55',
               borderColor: mainPurple,
               data: ['0', '500', '1000', '750', '1750', '1250', '1500', '1000', '1500', '2250', '2000']
@@ -39,7 +39,7 @@ var chart = new Chart(ctx, {
     data: {
         labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
         datasets: [{
-            label: 'Daily Traffic',
+            label: '',
             backgroundColor: mainPurple,
             borderColor: mainPurple,
             data: [0, 10, 5, 2, 20, 30, 45]
@@ -62,8 +62,8 @@ var chart = new Chart(ctx, {
         labels: ['Phones', 'Tablets', 'Desktops'],
         datasets: [{
             label: 'Mobile Users',
-            backgroundColor: mainPurple,
-            borderColor: mainPurple,
+            backgroundColor: [mainPurple, 'green', 'orange'],
+            borderColor: 'transparent',
             data: [60, 15, 25]
         }]
     },

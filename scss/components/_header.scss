@@ -1,0 +1,65 @@
+// ==========================
+// Header 
+// ==========================
+
+header {
+  background-color: $header-theme;
+  color: white;
+}
+
+.title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+
+header svg {
+  width: 25px;  
+  fill: $svg-unselected;
+  padding: 10px;
+}
+
+.user-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+  padding: 0 1em;
+}
+
+#avatarMain {
+  width: 30%;
+  height: auto;
+  margin: 1em;
+}
+
+//==========================
+//==== Alert bar styles ====
+//==========================
+
+.alert-bar {
+  background-color: $header-theme;
+  color: white;
+  padding: 1em;
+  display: flex;
+}
+
+.alert-text-area {
+  background-color: $header-theme;
+}
+
+.alert-bar button {
+  background: transparent;
+  border: none;
+  display: inline;
+  font-size: 10px;
+}
+
+.alert-text {
+  font-weight: 700;
+}
+
+.alert-content {
+  margin-left: 5px;
+}

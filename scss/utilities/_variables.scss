@@ -1,0 +1,22 @@
+// ======================================
+//  Variables
+// ======================================
+
+// Fonts
+$main-font: 'Roboto', sans-serif;
+
+// Colors
+$header-theme: #7476bf;
+$nav-theme: #4d4c72;
+$background: #ffffff;
+$svg-selected: #ffffff;
+$svg-unselected: rgba($svg-selected, 0.6);
+$main-text-color: #777777;
+$main-text-light: lighten($main-text-color, 30%);
+$active: #85db80;
+
+
+// Breakpoints
+$break-s: 500px;
+$break-m: 768px;
+$break-l: 1100px;

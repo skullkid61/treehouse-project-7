@@ -1,0 +1,22 @@
+//=======================
+// Grid styles
+//=======================
+
+main {
+  display: grid;
+  grid-template-rows: auto;
+  background-color: #a8a8a869;
+  grid-gap: 1px;
+}
+
+main div {
+  background-color: white;
+  padding: .4em;
+}
+
+.dashboard-nav {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+}

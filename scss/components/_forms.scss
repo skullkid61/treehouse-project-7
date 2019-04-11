@@ -1,0 +1,21 @@
+//=======================
+// Forms
+//=======================
+
+.search-container {
+  border: solid 1px $main-text-light;
+  border-radius: 5px;
+}
+  
+.search-container input[type=text] {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+}
+  
+.search-container button {
+  float: right;
+  background: white;
+  border: none;
+  font-size: 25px;
+}
