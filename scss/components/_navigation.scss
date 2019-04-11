@@ -3,13 +3,13 @@
 //=========================
 
 nav {
-    display: flex;
-    justify-content: space-evenly;
-    height: 100px;
-    background-color: $nav-theme;
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+  background-color: $nav-theme;
 }
   
 nav svg {
-    flex-basis: 40px;
-    fill: $svg-unselected;
+  flex-basis: 40px;
+  fill: $svg-unselected;
 }

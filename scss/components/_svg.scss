@@ -4,6 +4,15 @@
 
 svg {
   max-width: 100%;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+.social-icon {
+  background-color: $header-theme;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 svg:hover {

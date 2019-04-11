@@ -1,6 +1,8 @@
 // Main traffic chart config
 
-const mainPurple = '#7476bf';
+const headerPurple = '#7476bf';
+const secondTone = '#81c98f';
+const thirdTone = '#73b1bf';
 
 var ctx = document.getElementById('mainTraffic').getContext('2d');
       var chart = new Chart(ctx, {
@@ -13,7 +15,7 @@ var ctx = document.getElementById('mainTraffic').getContext('2d');
           datasets: [{
               label: 'Hourly',
               backgroundColor: '#7476bf55',
-              borderColor: mainPurple,
+              borderColor: headerPurple,
               data: ['0', '500', '1000', '750', '1750', '1250', '1500', '1000', '1500', '2250', '2000']
           }]
       },
@@ -40,8 +42,8 @@ var chart = new Chart(ctx, {
         labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
         datasets: [{
             label: '',
-            backgroundColor: mainPurple,
-            borderColor: mainPurple,
+            backgroundColor: headerPurple,
+            borderColor: headerPurple,
             data: [0, 10, 5, 2, 20, 30, 45]
         }]
     },
@@ -62,9 +64,9 @@ var chart = new Chart(ctx, {
         labels: ['Phones', 'Tablets', 'Desktops'],
         datasets: [{
             label: 'Mobile Users',
-            backgroundColor: [mainPurple, 'green', 'orange'],
+            backgroundColor: [headerPurple, secondTone, thirdTone],
             borderColor: 'transparent',
-            data: [60, 15, 25]
+            data: [70, 14, 16]
         }]
     },
 

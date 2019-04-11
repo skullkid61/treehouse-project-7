@@ -33,33 +33,3 @@ header svg {
   height: auto;
   margin: 1em;
 }
-
-//==========================
-//==== Alert bar styles ====
-//==========================
-
-.alert-bar {
-  background-color: $header-theme;
-  color: white;
-  padding: 1em;
-  display: flex;
-}
-
-.alert-text-area {
-  background-color: $header-theme;
-}
-
-.alert-bar button {
-  background: transparent;
-  border: none;
-  display: inline;
-  font-size: 10px;
-}
-
-.alert-text {
-  font-weight: 700;
-}
-
-.alert-content {
-  margin-left: 5px;
-}

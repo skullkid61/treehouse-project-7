@@ -5,13 +5,8 @@
 main {
   display: grid;
   grid-template-rows: auto;
-  background-color: #a8a8a869;
+  background-color: $background;
   grid-gap: 1px;
-}
-
-main div {
-  background-color: white;
-  padding: .4em;
 }
 
 .dashboard-nav {
@@ -19,4 +14,88 @@ main div {
   flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
+  background-color: $dark-background;
+}
+
+.dashboard-nav h2 {
+  background-color: $background;
+  border-right: $border;
+  border-top: $border;
+  border-bottom: $background;
+  margin-bottom: -3px;
+  z-index: 10;
+}
+
+.chart {
+  padding: .4em;
+}
+
+.traffic-main {
+  border-top: $border;
+}
+
+//==========================
+//==== Alert bar styles ====
+//==========================
+
+.alert-bar {
+  background-color: $header-theme;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.alert-text-area {
+  background-color: $header-theme;
+}
+
+.alert-bar button {
+  background: transparent;
+  border: none;
+  display: inline;
+  font-size: 10px;
+}
+
+.alert-text {
+  font-weight: 700;
+}
+
+.alert-content {
+  margin-left: 5px;
+}
+
+//==========================
+//==== Social ==============
+//==========================
+
+.social {
+  border: $border;
+  border-radius: 5px;
+  background-color: $dark-background;
+  margin: 1em;
+  padding: 1em;
+}
+
+.social h3 {
+  color: $header-theme;
+  font-weight: bold;
+  padding: 0;
+  text-transform: initial;
+  font-size: 1em;
+  margin: 0;
+}
+
+.social p {
+  font-size: 2em;
+  margin: 0;
+  font-weight: 100;
+}
+
+.social-icon {
+  fill: $svg-selected;
+  float: left;
+  box-sizing: border-box;
+  margin: 0 1em;
 }

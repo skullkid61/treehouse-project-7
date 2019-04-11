@@ -367,32 +367,6 @@ header svg {
   margin: 1em;
 }
 
-.alert-bar {
-  background-color: #7476bf;
-  color: white;
-  padding: 1em;
-  display: flex;
-}
-
-.alert-text-area {
-  background-color: #7476bf;
-}
-
-.alert-bar button {
-  background: transparent;
-  border: none;
-  display: inline;
-  font-size: 10px;
-}
-
-.alert-text {
-  font-weight: 700;
-}
-
-.alert-content {
-  margin-left: 5px;
-}
-
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -415,6 +389,15 @@ nav svg {
 
 svg {
   max-width: 100%;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+.social-icon {
+  background-color: #7476bf;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 svg:hover {
@@ -428,6 +411,7 @@ canvas {
 .search-container {
   border: solid 1px #c4c4c4;
   border-radius: 5px;
+  margin: 0.6em;
 }
 
 .search-container input[type=text] {
@@ -451,13 +435,8 @@ img {
 main {
   display: grid;
   grid-template-rows: auto;
-  background-color: #a8a8a869;
+  background-color: #ffffff;
   grid-gap: 1px;
-}
-
-main div {
-  background-color: white;
-  padding: 0.4em;
 }
 
 .dashboard-nav {
@@ -465,6 +444,82 @@ main div {
   flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
+  background-color: #fbfbfb;
+}
+
+.dashboard-nav h2 {
+  background-color: #ffffff;
+  border-right: solid 1px #c4c4c4;
+  border-top: solid 1px #c4c4c4;
+  border-bottom: #ffffff;
+  margin-bottom: -3px;
+  z-index: 10;
+}
+
+.chart {
+  padding: 0.4em;
+}
+
+.traffic-main {
+  border-top: solid 1px #c4c4c4;
+}
+
+.alert-bar {
+  background-color: #7476bf;
+  color: white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.alert-text-area {
+  background-color: #7476bf;
+}
+
+.alert-bar button {
+  background: transparent;
+  border: none;
+  display: inline;
+  font-size: 10px;
+}
+
+.alert-text {
+  font-weight: 700;
+}
+
+.alert-content {
+  margin-left: 5px;
+}
+
+.social {
+  border: solid 1px #c4c4c4;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  margin: 1em;
+  padding: 1em;
+}
+
+.social h3 {
+  color: #7476bf;
+  font-weight: bold;
+  padding: 0;
+  text-transform: initial;
+  font-size: 1em;
+  margin: 0;
+}
+
+.social p {
+  font-size: 2em;
+  margin: 0;
+  font-weight: 100;
+}
+
+.social-icon {
+  fill: #ffffff;
+  float: left;
+  box-sizing: border-box;
+  margin: 0 1em;
 }
 
 h1 {
@@ -482,6 +537,7 @@ h2 {
   font-size: 1em;
   font-weight: 400;
   padding: 1em;
+  margin: 0;
 }
 
 h3 {

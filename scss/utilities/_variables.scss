@@ -9,11 +9,17 @@ $main-font: 'Roboto', sans-serif;
 $header-theme: #7476bf;
 $nav-theme: #4d4c72;
 $background: #ffffff;
+$dark-background: #fbfbfb;
 $svg-selected: #ffffff;
 $svg-unselected: rgba($svg-selected, 0.6);
 $main-text-color: #777777;
 $main-text-light: lighten($main-text-color, 30%);
-$active: #85db80;
+$alert: #85db80;
+$second-tone: #81c98f;
+$third-tone: #73b1bf;
+
+// Borders
+$border: solid 1px $main-text-light;
 
 
 // Breakpoints
