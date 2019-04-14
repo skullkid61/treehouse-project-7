@@ -6,3 +6,18 @@ body {
   font-family: $main-font;
   color: $main-text-color;
 }
+
+svg {
+  max-width: 100%;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+svg:hover {
+  fill: $svg-selected;
+}
+
+a {
+  text-decoration: none;
+  color: $header-theme;
+}

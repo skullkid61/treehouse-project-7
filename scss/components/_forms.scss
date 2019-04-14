@@ -9,9 +9,14 @@
 }
   
 .search-container input[type=text] {
-  padding: 6px;
+  padding: 12px 0 12px 12px;
   font-size: 17px;
   border: none;
+  border-radius: 5px;
+}
+
+.search-container input[type=text]::placeholder {
+  color: $main-text-light;
 }
   
 .search-container button {
@@ -19,4 +24,6 @@
   background: white;
   border: none;
   font-size: 25px;
+  padding: 9px 6px 4px;
+  border-radius: 5px;
 }
