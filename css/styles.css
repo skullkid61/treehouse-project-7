@@ -461,8 +461,8 @@ main {
   z-index: 10;
 }
 
-.chart {
-  padding: 0.4em;
+.card {
+  padding: 1em;
 }
 
 .traffic-main {
@@ -498,11 +498,6 @@ main {
   margin-left: 5px;
 }
 
-.social-cards {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .social-card {
   border: solid 1px #c4c4c4;
   border-radius: 5px;
@@ -531,7 +526,7 @@ main {
 
 .social-icon-outer {
   background-color: #7476bf;
-  margin: 0 1em;
+  margin: 0 1em 0 0;
   padding: 1em;
   border-radius: 50%;
   width: 50px;
@@ -562,7 +557,6 @@ main {
   border-bottom: solid 1px #c4c4c4;
   display: flex;
   align-items: center;
-  margin: 0 10px;
 }
 
 .memberListing:last-child {
@@ -611,7 +605,7 @@ h3 {
   font-size: 0.8em;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 1em;
+  padding: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
