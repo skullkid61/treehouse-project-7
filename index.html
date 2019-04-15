@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -226,50 +227,72 @@
           <div class="memberListing">
             <img src="images/member-2.jpg" alt="" />
             <div class="member-text">
-              <div class="memberActivity">Victoria Chambers commented on YourApp's SEO Tips</div>
-              <div class="timeSinceActivity">4 hours ago</div>
+              <div class="memberActivity">Dale Byrd liked the post Facebook's Chnages for 2016</div>
+              <div class="timeSinceActivity">5 hours ago</div>
             </div>
           </div>
           <div class="memberListing">
             <img src="images/member-3.jpg" alt="" />
             <div class="member-text">
-              <div class="memberActivity">Victoria Chambers commented on YourApp's SEO Tips</div>
-              <div class="timeSinceActivity">4 hours ago</div>
+              <div class="memberActivity">Dawn Wood commented on Facebook's Changes for 2016</div>
+              <div class="timeSinceActivity">5 hours ago</div>
             </div>
           </div>
           <div class="memberListing">
             <img src="images/member-4.jpg" alt="" />
             <div class="member-text">
-              <div class="memberActivity">Victoria Chambers commented on YourApp's SEO Tips</div>
-              <div class="timeSinceActivity">4 hours ago</div>
+              <div class="memberActivity">Dan Oliver posted YourApp's SEO Tips</div>
+              <div class="timeSinceActivity">1 day ago</div>
             </div>
           </div>
         </div>
 
-        <!-- Unhide message and setting for later -->
-        <!-- <div class="card message">
+        <div class="card message">
+          <h3>Message User</h3>
           <form>
-            <legend>Message User</legend> 
-            <input type="text">
-            <textarea rows="5"></textarea>
-            <input type="submit" value="Send">
+            <input type="text" placeholder="Search for User">
+            <textarea rows="5" placeholder="Message for User"></textarea>
+            <button type="submit">Send</button>
           </form>
         </div>
+
         <div class="card settings">
+          <h3>Settings</h3> 
           <form>
-            <legend>Settings</legend> 
-            <label for="emailNotifications">Send Email Notifications</label>
-            <input type="checkbox" id="emailNotifications">
-            <label for="publicProfile">Set Profile to Public</label>
-            <input type="checkbox" id="publicProfile">
+            <label for="emailNotifications" class="switch-light switch-ios" onclick="">
+              <input type="checkbox" id="emailNotifications">
+              <strong>
+                Send Email Notifications
+              </strong>
+              <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
+            
+            <label for="publicProfile" class="switch-light switch-ios" onclick="">
+              <input type="checkbox" id="publicProfile">
+              <strong>
+                  Set Profile to Public
+              </strong>
+              <span>
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
+
             <select id="time-zone">
               <option value="" disabled selected>Select Timezone</option>
               <option value="adelaide">Adelaide GMT+10:30</option>
             </select>
-            <input type="submit" value="Save">
-            <input type="reset" value="Cancel">
+            <div class="settings-buttons">
+              <button type="submit">Save</button>
+              <button type="reset">Cancel</button>
+            </div>
           </form>
-        </div> -->
+        </div>
       </main>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>

@@ -406,21 +406,34 @@ canvas {
   max-width: 100%;
 }
 
+input::placeholder,
+textarea::placeholder,
+select {
+  color: #c4c4c4;
+  font-weight: 100;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 .search-container {
   border: solid 1px #c4c4c4;
   border-radius: 5px;
   margin: 0.6em;
+  overflow: hidden;
 }
 
 .search-container input[type=text] {
   padding: 12px 0 12px 12px;
   font-size: 17px;
   border: none;
-  border-radius: 5px;
 }
 
-.search-container input[type=text]::placeholder {
-  color: #c4c4c4;
+select option {
+  color: #777777;
+  font-weight: 400;
 }
 
 .search-container button {
@@ -429,7 +442,66 @@ canvas {
   border: none;
   font-size: 25px;
   padding: 9px 6px 4px;
+}
+
+form input[type=text],
+form textarea,
+form select {
+  padding: 12px;
   border-radius: 5px;
+  border: solid 1px #c4c4c4;
+  margin-bottom: 1em;
+  background-color: #fbfbfb;
+}
+
+button {
+  padding: 12px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #7476bf;
+  border: none;
+  border-radius: 5px;
+}
+
+button[type=reset] {
+  background-color: #c4c4c4;
+}
+
+.settings-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -1em;
+}
+
+.settings-buttons button {
+  margin: 0 1em;
+  flex: 1;
+}
+
+.switch-ios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  max-width: 380px;
+}
+
+.switch-light::after {
+  content: none;
+}
+
+.switch-ios.switch-light input:checked ~ span {
+  border-color: #7476bf;
+  box-shadow: inset 0 0 0 30px #7476bf;
+}
+
+.switch-ios.switch-light input:checked ~ span a {
+  border-color: #7476bf;
+}
+
+.switch-ios span {
+  max-width: 80px;
 }
 
 img {
@@ -564,14 +636,14 @@ main {
 }
 
 .memberListing img {
-  width: 80px;
-  padding: 10px;
+  width: 70px;
+  padding: 10px 10px 10px 0;
 }
 
 .member-text {
   display: flex;
   flex-direction: column;
-  font-size: 0.8em;
+  font-size: 0.9em;
   line-height: 1.5;
 }
 
@@ -581,6 +653,18 @@ main {
 
 .memberName {
   color: #444444;
+}
+
+.recent-activity .memberListing::after {
+  content: ">";
+  transform: scaleY(2);
+  color: #7476bf;
+  position: absolute;
+  right: 1em;
+}
+
+.recent-activity .member-text {
+  padding-right: 5px;
 }
 
 h1 {

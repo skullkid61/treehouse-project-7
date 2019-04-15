@@ -2,28 +2,111 @@
 // Forms
 //=======================
 
+input::placeholder,
+textarea::placeholder,
+select {
+  color: $main-text-light;
+  font-weight: 100;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+// Search bar
+
 .search-container {
   border: solid 1px $main-text-light;
   border-radius: 5px;
   margin: .6em;
+  overflow: hidden;
 }
   
 .search-container input[type=text] {
   padding: 12px 0 12px 12px;
   font-size: 17px;
   border: none;
-  border-radius: 5px;
 }
 
-.search-container input[type=text]::placeholder {
-  color: $main-text-light;
+select option {
+  color: $main-text-color;
+  font-weight: 400;
 }
-  
+
 .search-container button {
   float: right;
   background: white;
   border: none;
   font-size: 25px;
   padding: 9px 6px 4px;
+}
+
+// Message to user
+
+form input[type=text],
+form textarea,
+form select {
+  padding: 12px;
   border-radius: 5px;
+  border: solid 1px $main-text-light;
+  margin-bottom: 1em;
+  background-color: $dark-background;
+}
+
+button {
+  padding: 12px;
+  text-transform: uppercase;
+  color: white;
+  background-color: $header-theme;
+  border: none;
+  border-radius: 5px;
+}
+
+button[type=reset] {
+  background-color: $main-text-light;
+}
+
+.settings-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -1em;
+}
+
+.settings-buttons button {
+  margin: 0 1em;
+  flex: 1;
+}
+
+// input[type=checkbox] {
+//   display: flex;
+//   justify-content: space-between;
+//   padding-bottom: 1em;
+//   max-width: 380px;
+// }
+
+.switch-ios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  max-width: 380px;
+}
+
+.switch-light::after {
+  content: none;
+}
+
+.switch-ios.switch-light input:checked ~ span {
+  border-color: $header-theme;
+  box-shadow: inset 0 0 0 30px $header-theme;
+}
+
+.switch-ios.switch-light input:checked ~ span a {
+  border-color: $header-theme;
+}
+
+.switch-ios span {
+  max-width: 80px;
 }
