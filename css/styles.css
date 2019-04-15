@@ -350,9 +350,21 @@ a {
   color: #7476bf;
 }
 
+*::selection {
+  background-color: #7476bf;
+  color: #ffffff;
+}
+
 header {
   background-color: #7476bf;
   color: white;
+}
+@media (min-width: 600px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+    padding: 0.9em;
+  }
 }
 
 .title-area {
@@ -360,6 +372,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 10%;
+}
+@media (min-width: 600px) {
+  .title-area {
+    padding: 0 10px;
+  }
 }
 
 header svg {
@@ -375,11 +392,23 @@ header svg {
   flex-wrap: wrap-reverse;
   padding: 0 1em;
 }
+@media (min-width: 600px) {
+  .user-information {
+    padding: 0 10px;
+    border-left: 1px solid #4d4c72;
+  }
+}
 
 #avatarMain {
   width: 30%;
   height: auto;
   margin: 1em;
+}
+@media (min-width: 600px) {
+  #avatarMain {
+    width: 20%;
+    margin: 0 1em;
+  }
 }
 
 nav {
@@ -409,7 +438,7 @@ canvas {
 input::placeholder,
 textarea::placeholder,
 select {
-  color: #c4c4c4;
+  color: #777777;
   font-weight: 100;
 }
 
@@ -423,12 +452,25 @@ form {
   border-radius: 5px;
   margin: 0.6em;
   overflow: hidden;
+  display: flex;
 }
 
 .search-container input[type=text] {
   padding: 12px 0 12px 12px;
   font-size: 17px;
   border: none;
+  width: 140px;
+  color: #777777;
+}
+@media (min-width: 360px) {
+  .search-container input[type=text] {
+    width: 180px;
+  }
+}
+@media (min-width: 600px) {
+  .search-container input[type=text] {
+    width: 30vw;
+  }
 }
 
 select option {
@@ -509,6 +551,10 @@ img {
   display: block;
 }
 
+.container {
+  display: grid;
+}
+
 main {
   display: grid;
   grid-template-rows: auto;
@@ -518,7 +564,6 @@ main {
 
 .dashboard-nav {
   display: flex;
-  flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
   background-color: #fbfbfb;
@@ -529,7 +574,7 @@ main {
   border-right: solid 1px #c4c4c4;
   border-top: solid 1px #c4c4c4;
   border-bottom: #ffffff;
-  margin-bottom: -3px;
+  margin-bottom: -18px;
   z-index: 10;
 }
 
@@ -544,7 +589,7 @@ main {
 .alert-bar {
   background-color: #7476bf;
   color: white;
-  padding: 1em;
+  padding: 0 0.4em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -553,6 +598,7 @@ main {
 
 .alert-text-area {
   background-color: #7476bf;
+  padding: 1em;
 }
 
 .alert-bar button {
@@ -570,6 +616,12 @@ main {
   margin-left: 5px;
 }
 
+@media (min-width: 600px) {
+  .social-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .social-card {
   border: solid 1px #c4c4c4;
   border-radius: 5px;
@@ -630,14 +682,19 @@ main {
   display: flex;
   align-items: center;
 }
+@media (min-width: 600px) {
+  .memberListing {
+    padding-left: 1em;
+  }
+}
 
 .memberListing:last-child {
   border-bottom: none;
 }
 
 .memberListing img {
-  width: 70px;
-  padding: 10px 10px 10px 0;
+  max-width: 70px;
+  padding: 10px 0;
 }
 
 .member-text {
@@ -645,10 +702,25 @@ main {
   flex-direction: column;
   font-size: 0.9em;
   line-height: 1.5;
+  padding-left: 10px;
+}
+@media (min-width: 360px) {
+  .member-text {
+    font-size: 1em;
+  }
 }
 
 .member-text a {
   font-size: 0.9em;
+}
+@media (min-width: 360px) {
+  .member-text a {
+    font-size: 1em;
+  }
+}
+
+.memberActivity {
+  padding-right: 8px;
 }
 
 .memberName {
@@ -657,6 +729,7 @@ main {
 
 .recent-activity .memberListing::after {
   content: ">";
+  font-weight: 100;
   transform: scaleY(2);
   color: #7476bf;
   position: absolute;
@@ -672,6 +745,12 @@ h1 {
   color: white;
   user-select: none;
   margin: 0;
+}
+@media (min-width: 600px) {
+  h1 {
+    font-size: 1.6em;
+    padding: 0;
+  }
 }
 
 h1 span {

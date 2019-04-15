@@ -2,6 +2,10 @@
 // Grid styles
 //=======================
 
+.container {
+  display: grid;
+}
+
 main {
   display: grid;
   grid-template-rows: auto;
@@ -11,7 +15,6 @@ main {
 
 .dashboard-nav {
   display: flex;
-  flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
   background-color: $dark-background;
@@ -22,7 +25,7 @@ main {
   border-right: $border;
   border-top: $border;
   border-bottom: $background;
-  margin-bottom: -3px;
+  margin-bottom: -18px;
   z-index: 10;
 }
 
@@ -41,7 +44,7 @@ main {
 .alert-bar {
   background-color: $header-theme;
   color: white;
-  padding: 1em;
+  padding: 0 .4em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,6 +53,7 @@ main {
 
 .alert-text-area {
   background-color: $header-theme;
+  padding: 1em;
 }
 
 .alert-bar button {
@@ -70,6 +74,14 @@ main {
 //==========================
 //==== Social ==============
 //==========================
+
+@include mq(medium) {
+  .social-cards {
+  display: flex;
+  flex-wrap: wrap;
+  }
+}
+
 
 .social-card {
   border: $border;
@@ -138,6 +150,9 @@ main {
   border-bottom: solid 1px $main-text-light;
   display: flex;
   align-items: center;
+  @include mq(medium) {
+    padding-left: 1em;
+  }
 }
 
 .memberListing:last-child {
@@ -145,8 +160,8 @@ main {
 }
 
 .memberListing img {
-  width: 70px;
-  padding: 10px 10px 10px 0;
+  max-width: 70px;
+  padding: 10px 0;
 }
 
 .member-text {
@@ -154,10 +169,21 @@ main {
   flex-direction: column;
   font-size: .9em;
   line-height: 1.5;
+  padding-left: 10px;
+  @include mq(small) {
+    font-size: 1em;
+  }
 }
 
 .member-text a {
   font-size: .9em;
+  @include mq(small) {
+    font-size: 1em;
+  }
+}
+
+.memberActivity {
+  padding-right: 8px;
 }
 
 .memberName {
@@ -166,6 +192,7 @@ main {
 
 .recent-activity .memberListing::after {
   content: ">";
+  font-weight: 100;
   transform: scaleY(2);
   color: $header-theme;
   position: absolute;

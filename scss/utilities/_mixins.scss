@@ -1,0 +1,25 @@
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $break-s) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $break-m) {
+       @content;
+    }
+  }
+  @else if $break == "large" {
+    @media (min-width: $break-l) {
+      @content;
+    }
+  }
+  @else if $break == "xlarge" {
+    @media (min-width: $break-xl) {
+      @content;
+    }
+  }
+  @else {
+    @error "Whoops! No value could be retrieved for `#{$break}`."
+  }
+}

@@ -5,7 +5,7 @@
 input::placeholder,
 textarea::placeholder,
 select {
-  color: $main-text-light;
+  color: $main-text-color;
   font-weight: 100;
 }
 
@@ -21,12 +21,21 @@ form {
   border-radius: 5px;
   margin: .6em;
   overflow: hidden;
+  display: flex;
 }
   
 .search-container input[type=text] {
   padding: 12px 0 12px 12px;
   font-size: 17px;
   border: none;
+  width: 140px;
+  color: $main-text-color;
+  @include mq(small) {
+    width: 180px;
+  }
+  @include mq(medium) {
+    width: 30vw;
+  }
 }
 
 select option {

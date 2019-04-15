@@ -21,3 +21,8 @@ a {
   text-decoration: none;
   color: $header-theme;
 }
+
+*::selection {
+  background-color: $header-theme;
+  color: $background;
+}
