@@ -7,6 +7,7 @@ header {
   color: white;
   @include mq(medium) {
     display: grid;
+    grid-area: header;
     grid-template-columns: 1fr 180px;
     padding: .9em;
   }
@@ -14,11 +15,12 @@ header {
 
 .title-area {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 10%;
   @include mq(medium) {
     padding: 0 10px;
+    justify-content: space-between;
   }
 }
 
@@ -31,17 +33,18 @@ header svg {
 .user-information {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap-reverse;
   padding: 0 1em;
   @include mq(medium) {
     padding: 0 10px;
     border-left: 1px solid $nav-theme;
+    justify-content: space-evenly;
   }
 }
 
 #avatarMain {
-  width: 30%;
+  width: 20%;
   height: auto;
   margin: 1em;
   @include mq(medium) {

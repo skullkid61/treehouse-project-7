@@ -7,9 +7,28 @@ nav {
   justify-content: space-evenly;
   height: 100px;
   background-color: $nav-theme;
+  @include mq(large) {
+    flex-direction: column;
+    grid-area: nav;
+    justify-content: flex-start;
+    height: auto;
+  }
 }
   
 nav svg {
   flex-basis: 40px;
   fill: $svg-unselected;
+  @include mq(large) {
+    flex-basis: 50px;
+    padding: 8px 28px;
+    margin: 6px 0;
+  }
+}
+
+nav svg:hover {
+  border-bottom: solid 2px $alert;
+  @include mq(large) {
+    border-bottom: none;
+    border-left: solid 2px $alert;
+  }
 }

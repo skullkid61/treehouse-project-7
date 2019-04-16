@@ -28,10 +28,10 @@ form {
   padding: 12px 0 12px 12px;
   font-size: 17px;
   border: none;
-  width: 140px;
+  width: 42vw;
   color: $main-text-color;
   @include mq(small) {
-    width: 180px;
+    width: 48vw;
   }
   @include mq(medium) {
     width: 30vw;
@@ -87,12 +87,7 @@ button[type=reset] {
   flex: 1;
 }
 
-// input[type=checkbox] {
-//   display: flex;
-//   justify-content: space-between;
-//   padding-bottom: 1em;
-//   max-width: 380px;
-// }
+// Switch settings =======
 
 .switch-ios {
   display: flex;
@@ -100,7 +95,9 @@ button[type=reset] {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1em;
-  max-width: 380px;
+  @include mq(medium) {
+    max-width: 70%;
+  }
 }
 
 .switch-light::after {

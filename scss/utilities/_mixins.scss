@@ -14,8 +14,13 @@
       @content;
     }
   }
-  @else if $break == "xlarge" {
+  @else if $break == "x-large" {
     @media (min-width: $break-xl) {
+      @content;
+    }
+  }
+  @else if $break == "xx-large" {
+    @media (min-width: $break-xxl) {
       @content;
     }
   }

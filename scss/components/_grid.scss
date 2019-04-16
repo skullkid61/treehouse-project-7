@@ -3,14 +3,43 @@
 //=======================
 
 .container {
-  display: grid;
+  @include mq(large) {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    grid-template-areas: 
+      "header header"
+      "nav main"
+  }
 }
 
 main {
   display: grid;
   grid-template-rows: auto;
-  background-color: $background;
-  grid-gap: 1px;
+  background-color: $main-text-light;
+  @include mq(large) {
+    grid-area: main;
+  }
+  @include mq(x-large) {
+    grid-template-columns: 50% 50%;
+    grid-gap: 1px;
+    grid-template-areas: 
+      "dashboard dashboard"
+      "alert alert"
+      "traffic traffic"
+      "daily-traffic mobile-users"
+      "social social"
+      "new-members recent-activity"
+      "message-user settings"
+  }
+  @include mq(xx-large) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+      "dashboard dashboard dashboard"
+      "alert alert alert"
+      "traffic daily-traffic mobile-users"
+      "social new-members recent-activity"
+      "social message-user settings"
+  }
 }
 
 .dashboard-nav {
@@ -18,6 +47,9 @@ main {
   justify-content: space-between;
   align-items: center;
   background-color: $dark-background;
+  @include mq(x-large) {
+    grid-area: dashboard;
+  }
 }
 
 .dashboard-nav h2 {
@@ -31,10 +63,22 @@ main {
 
 .card  {
   padding: 1em;
+  background-color: $background;
+}
+
+.alert {
+  border-top: $border;
+  @include mq(x-large) {
+    grid-area: alert;
+    border-top: none;
+    margin-bottom: -5px;
+  }
 }
 
 .traffic-main {
-  border-top: $border;
+  @include mq(x-large) {
+    grid-area: traffic;
+  }
 }
 
 //==========================
@@ -75,6 +119,12 @@ main {
 //==== Social ==============
 //==========================
 
+@include mq(x-large) {
+  .social-block {
+    grid-area: social;
+  }
+}
+
 @include mq(medium) {
   .social-cards {
   display: flex;
@@ -92,6 +142,9 @@ main {
   display: flex;
   align-content: center;
   max-width: 340px;
+  @include mq(x-large) {
+    width: 290px;
+  }
 }
 
 .social-text h3 {
@@ -145,9 +198,16 @@ main {
 //==== New Members =========
 //==========================
 
+@include mq(x-large) {
+  .new-members {
+    grid-area: new-members;
+  }
+}
+
+
 .memberListing {
   box-sizing: border-box;
-  border-bottom: solid 1px $main-text-light;
+  border-bottom: solid 1px $main-text-lighter;
   display: flex;
   align-items: center;
   @include mq(medium) {
@@ -190,6 +250,12 @@ main {
   color: $main-text-dark;
 }
 
+@include mq(x-large) {
+  .recent-activity {
+    grid-area: recent-activity;
+  }
+}
+
 .recent-activity .memberListing::after {
   content: ">";
   font-weight: 100;
@@ -201,4 +267,19 @@ main {
 
 .recent-activity .member-text {
   padding-right: 5px;
+}
+
+@include mq(x-large) {
+  .message {
+    grid-area: message-user;
+  }
+}
+
+@include mq(x-large) {
+  .settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: settings;
+  }
 }
