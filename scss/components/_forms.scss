@@ -53,6 +53,17 @@ select option {
 
 // Message to user
 
+.successful-send {
+  color: $background;
+  background-color: $alert;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.unsuccessful-send {
+  color: red;
+}
+
 form input[type=text],
 form textarea,
 form select {
@@ -94,7 +105,7 @@ button[type=reset] {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   @include mq(medium) {
     max-width: 70%;
   }

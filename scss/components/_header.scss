@@ -28,6 +28,11 @@ header svg {
   width: 25px;  
   fill: $svg-unselected;
   padding: 10px;
+  transition: .5s;
+}
+
+header svg:hover {
+  stroke: white 1;
 }
 
 .user-information {
@@ -38,7 +43,7 @@ header svg {
   padding: 0 1em;
   @include mq(medium) {
     padding: 0 10px;
-    border-left: 1px solid $nav-theme;
+    border-left: 1px solid $nav-theme-pale;
     justify-content: space-evenly;
   }
 }

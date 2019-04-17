@@ -3,6 +3,17 @@
 const headerPurple = '#7476bf';
 const secondTone = '#81c98f';
 const thirdTone = '#73b1bf';
+const alertCancel = document.querySelector('.alertCancel');
+const alertBar = document.querySelector('.alert-bar');
+
+function hideAlertBar(){
+  alertBar.classList.add('hidden');
+}
+
+alertCancel.addEventListener('click', (e) => {
+  alertBar.classList.add('rise');
+  setTimeout(hideAlertBar, 900);
+});
 
 var ctx = document.getElementById('mainTraffic').getContext('2d');
       var chart = new Chart(ctx, {
@@ -16,12 +27,16 @@ var ctx = document.getElementById('mainTraffic').getContext('2d');
               label: 'Hourly',
               backgroundColor: '#7476bf55',
               borderColor: headerPurple,
-              data: ['0', '500', '1000', '750', '1750', '1250', '1500', '1000', '1500', '2250', '2000']
+              data: ['0', '500', '1000', '750', '1750', '1250', '1500', '1000', '1500', '2050', '1900']
           }]
       },
 
       // Configuration options go here
       options: {
+        responsive: true,
+        legend: {
+          display: false
+        },
         elements: {
             line: {
                 tension: 0 // disables bezier curves
@@ -49,7 +64,11 @@ var chart = new Chart(ctx, {
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+      legend: {
+        display: false,
+      }
+    }
 });
 
 // Mobile users doughnut chart config
@@ -71,5 +90,13 @@ var chart = new Chart(ctx, {
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+      legend: {
+        position: 'right',
+        lineWidth: 1
+      }
+    }
 });
+
+// Alert bar config
+

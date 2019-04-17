@@ -7,7 +7,9 @@ $main-font: 'Roboto', sans-serif;
 
 // Colors
 $header-theme: #7476bf;
-$nav-theme: #4d4c72;
+$dark-header: darken($header-theme, 23%);
+$nav-theme: desaturate($dark-header, 16%);
+$nav-theme-pale: rgba($nav-theme, 0.7);
 $background: #ffffff;
 $dark-background: #fbfbfb;
 $svg-selected: #ffffff;
@@ -28,5 +30,5 @@ $border: solid 1px $main-text-light;
 $break-s: 360px;
 $break-m: 600px;
 $break-l: 768px;
-$break-xl: 1024px;
-$break-xxl: 1500px;
+$break-xl: 900px;
+$break-xxl: 1350px;

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>MyApp&trade; Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -103,12 +104,14 @@
           <h2>Dashboard</h2>
           <div class="search-container">
             <input type="text" placeholder="Search" name="search">
-            <button type="submit"><i class="material-icons purple">
+            <button type="submit">
+              <i class="material-icons purple">
                 search
-                </i></button>
+              </i>
+            </button>
           </div>
         </div>
-        
+
         <!-- Alert bar -->
         <div class="card alert">
           <div class="alert-bar">
@@ -116,9 +119,11 @@
               <span class="alert-text">Alert</span>
               <span class="alert-content">You have some important news! It's so important that we've decided to alert you to this fact.</span>
             </div>
-            <button><i class="material-icons white">
+            <button class="alertCancel">
+              <i class="material-icons white">
               cancel
-            </i></button>
+              </i>
+            </button>
           </div>
         </div>
 
@@ -253,6 +258,8 @@
 
         <div class="card message">
           <h3>Message User</h3>
+          <p class="successful-send">Your message was sent successfully</p>
+          <p class="unsuccessful-send">Please complete all fields</p>
           <form>
             <input type="text" placeholder="Search for User">
             <textarea rows="5" placeholder="Message for User"></textarea>

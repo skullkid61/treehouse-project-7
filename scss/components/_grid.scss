@@ -93,6 +93,8 @@ main {
   justify-content: space-between;
   align-items: center;
   border-radius: 5px;
+  opacity: 1;
+  transition: all .8s linear;
 }
 
 .alert-text-area {
@@ -239,6 +241,7 @@ main {
   font-size: .9em;
   @include mq(small) {
     font-size: 1em;
+    font-weight: 400;
   }
 }
 
@@ -269,8 +272,8 @@ main {
   padding-right: 5px;
 }
 
-@include mq(x-large) {
-  .message {
+.message {
+  @include mq(x-large) {
     grid-area: message-user;
   }
 }
