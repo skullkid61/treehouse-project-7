@@ -10,7 +10,12 @@ const searchUser = document.getElementById('searchUser');
 const messageUser = document.getElementById('messageUser');
 const sendMessage = document.querySelector('.userMessage');
 
+const alertBell = document.querySelector('header svg');
 
+alertBell.addEventListener('click', (e) => {
+  const dot = alertBell.querySelector('circle');
+  dot.parentNode.removeChild(dot);
+})
 
 const success = document.createElement('p');
 success.textContent = 'Your message was sent successfully';

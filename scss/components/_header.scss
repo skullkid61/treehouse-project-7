@@ -31,8 +31,16 @@ header svg {
   transition: .5s;
 }
 
+header svg circle {
+  fill: pink;
+}
+
 header svg:hover {
   stroke: white 1;
+}
+
+.notification {
+  fill: $alert;
 }
 
 .user-information {

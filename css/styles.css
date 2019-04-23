@@ -397,8 +397,16 @@ header svg {
   transition: 0.5s;
 }
 
+header svg circle {
+  fill: pink;
+}
+
 header svg:hover {
   stroke: white 1;
+}
+
+.notification {
+  fill: #85db80;
 }
 
 .user-information {
