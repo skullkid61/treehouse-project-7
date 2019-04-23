@@ -533,10 +533,12 @@ select option {
   background-color: #85db80;
   border-radius: 5px;
   padding: 8px;
+  margin-top: 0;
 }
 
 .unsuccessful-send {
   color: red;
+  margin-top: 0;
 }
 
 form input[type=text],

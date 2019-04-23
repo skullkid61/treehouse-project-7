@@ -58,10 +58,12 @@ select option {
   background-color: $alert;
   border-radius: 5px;
   padding: 8px;
+  margin-top: 0;
 }
 
 .unsuccessful-send {
   color: red;
+  margin-top: 0;
 }
 
 form input[type=text],

@@ -6,9 +6,42 @@ const thirdTone = '#73b1bf';
 const alertCancel = document.querySelector('.alertCancel');
 const alertBar = document.querySelector('.alert-bar');
 
+const searchUser = document.getElementById('searchUser');
+const messageUser = document.getElementById('messageUser');
+const sendMessage = document.querySelector('.userMessage');
+
+
+
+const success = document.createElement('p');
+success.textContent = 'Your message was sent successfully';
+success.classList.add('successful-send');
+const fail = document.createElement('p');
+fail.textContent = 'Please complete all fields';
+fail.classList.add('unsuccessful-send');
+
+const sendMessageButton = sendMessage.querySelector('button');
+
+
+sendMessageButton.addEventListener('click', (e) => {
+  if (messageUser.value === '' || searchUser.value === '' ) {
+    e.preventDefault();
+    sendMessage.prepend(fail);
+    success.parentNode.removeChild(success);
+  } else {
+    e.preventDefault();
+    messageUser.value = '';
+    searchUser.value = '';
+    sendMessage.prepend(success);
+    fail.parentNode.removeChild(fail);
+  }
+});
+
+
+
 function hideAlertBar(){
   alertBar.classList.add('hidden');
 }
+
 
 alertCancel.addEventListener('click', (e) => {
   alertBar.classList.add('rise');
